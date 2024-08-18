@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NikeStoreTir1403" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+<item name="android:layoutDirection">rtl</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorOnSurface">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+
+        <!-- Customize your theme here. -->
+        <item name="bottomNavigationStyle">@style/MyBottomNavigation</item>
+
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="fontFamily">@font/iranyekan_medium</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Owl.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Owl.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Owl.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Owl.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Owl.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Owl.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Owl.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Owl.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Owl.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Owl.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Owl.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Owl.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Owl.Overline</item>
+<item name="android:lineSpacingExtra">6dp</item>
+<item name="android:includeFontPadding">false</item>
+        <!-- Customize your theme here. -->
+        <item name="dividerColor">@color/gray</item>
+        <item name="android:textColorSecondary">@color/darkGray</item>
+    </style>
+    <style name="Theme.NikeStoreTir1403.AuthTheme" parent="Theme.NikeStoreTir1403">
+        <item name="materialButtonStyle">@style/Theme.NikeStoreTir1403.AuthTheme.Button</item>
+        <item name="android:editTextStyle">@style/Theme.NikeStoreTir1403.AuthTheme.EditText</item>
+<item name="android:statusBarColor">@color/black</item>
+<item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="appBarLayoutStyle">@style/appBarLayoutStyle</item>
+        <item name="windowColorBackgroundSub">#f5f5f5</item>
+
+    </style>
+</resources>

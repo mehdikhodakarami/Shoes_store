@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Owl.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+<item name="android:textSize">18sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:fontFamily">@font/iranyekan_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+
+    </style>
+
+    <style name="TextAppearance.Owl.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <style name="TextAppearance.Owl.Button" parent="TextAppearance.MaterialComponents.Button">
+
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Owl.Caption" parent="TextAppearance.MaterialComponents.Caption">
+
+    </style>
+
+    <style name="TextAppearance.Owl.Overline" parent="TextAppearance.MaterialComponents.Overline">
+
+    </style>
+
+    <style name="TextAppearance.Owl.BottomNavigation" parent="TextAppearance.Owl.Caption">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+</resources>

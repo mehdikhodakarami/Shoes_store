@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.shipping.ShippingActivity">
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    style="@style/appBarLayoutStyle"
+    android:layout_height="wrap_content">
+<com.example.nikestore_tir_1403.view.NikeToolbar
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:id="@+id/shippingToolbar"
+    app:nt_title="@string/shippingToolbarTitle"/>
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:paddingBottom="32dp"
+        android:clipToPadding="false"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/shippingTextInputLayoutStyle"
+                android:id="@+id/firstNameEtl"
+                android:layout_height="wrap_content">
+<com.google.android.material.textfield.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/firstNameEt"
+    android:text="مهدی"
+    style="@style/shippingTextInputEditText"
+    android:hint="@string/firstName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/shippingTextInputLayoutStyle"
+                android:id="@+id/lastNameEtl"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastNameEt"
+                    android:text="خداکرمی"
+                    style="@style/shippingTextInputEditText"
+                    android:hint="@string/lastName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/shippingTextInputLayoutStyle"
+                android:id="@+id/phoneNumberEtl"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phoneNumberEt"
+                    android:text="09168660768"
+                    style="@style/shippingTextInputEditText"
+                    android:hint="@string/phoneNumber" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/shippingTextInputLayoutStyle"
+                android:id="@+id/postalCodeEtl"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postalCodeEt"
+                    android:text="1111111111"
+                    style="@style/shippingTextInputEditText"
+                    android:hint="@string/postalCode" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/shippingTextInputLayoutStyle"
+                android:id="@+id/addressEtl"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressEt"
+                    style="@style/shippingTextInputEditText"
+                    android:hint="@string/address"
+                    android:text="تهران خیابان فرشته کوچه گلها ساختمان رز پلاک ۴۲"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<include layout="@layout/item_purchase_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="12dp"
+    android:id="@+id/purchaseDetailShipping"
+    android:layout_marginEnd="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/codBtn"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/cashOnDelivery"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/onlinePayMent"
+                    android:id="@+id/onlinePaymentBtn"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

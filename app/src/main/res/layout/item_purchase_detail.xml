@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:padding="8dp"
+    android:text="@string/purchaseDetail"
+    android:textColor="?android:textColorSecondary"
+    android:textAppearance="?textAppearanceHeadline6"
+    android:layout_height="wrap_content"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:paddingBottom="12dp"
+    android:layout_marginBottom="8dp">
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/totalPriceTv"
+     android:text="@string/totalPrice"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     android:layout_marginTop="12dp"
+     android:layout_marginStart="16dp"
+     android:textAppearance="?textAppearanceBody1"/>
+
+    <TextView
+        android:id="@+id/shippingCostTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/shippingCost"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@+id/totalPriceTv"
+        app:layout_constraintTop_toBottomOf="@+id/totalPriceTv" />
+    <TextView
+        android:id="@+id/payableTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/payablePrice"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@+id/totalPriceTv"
+
+        app:layout_constraintTop_toBottomOf="@+id/shippingCostTv" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/totalpriceNumberTv"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="@id/totalPriceTv"
+        app:layout_constraintBottom_toBottomOf="@+id/totalPriceTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="160000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/shippingCostNumberTv"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="@id/shippingCostTv"
+        app:layout_constraintBottom_toBottomOf="@+id/shippingCostTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="160000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/payableNumberTv"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="@id/payableTv"
+        app:layout_constraintBottom_toBottomOf="@+id/payableTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="160000"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPriceTv"
+        app:layout_constraintBottom_toTopOf="@id/shippingCostTv"
+        android:background="?dividerColor"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shippingCostTv"
+        app:layout_constraintBottom_toTopOf="@id/payableTv"
+        android:background="?dividerColor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

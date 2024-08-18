@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="MyBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+<item name="itemRippleColor">@color/item_nav_ripple_color</item>
+        <item name="rippleColor">@color/item_nav_ripple_color</item>
+<item name="itemIconTint">@color/item_nav_color</item>
+<item name="itemTextColor">@color/item_nav_color</item>
+        <item name="itemTextAppearanceActive">@style/ActiveItemBottomNavigationTextViewAppearance</item>
+    </style>
+<style name="ActiveItemBottomNavigationTextViewAppearance" parent="TextAppearance.MaterialComponents.Caption"
+>
+    <item name="fontFamily">@font/iranyekan_extrabold</item>
+    <item name="android:fontFamily">@font/iranyekan_extrabold</item>
+
+</style>
+    <style name="Theme.NikeStoreTir1403.AuthTheme.Button" parent="Theme.NikeStoreTir1403.AuthTheme">
+        <item name="backgroundTint">?colorOnBackground</item>
+<item name="android:textColor">@color/black</item>
+        <item name="android:buttonCornerRadius" tools:targetApi="p">8dp</item>
+        <item name="paddingStart">16dp</item>
+        <item name="paddingEnd">16dp</item>
+        <item name="fontFamily">@font/iranyekan_extrabold</item>
+
+
+
+
+    </style>
+
+<style name="Theme.NikeStoreTir1403.AuthTheme.EditText" parent="Theme.NikeStoreTir1403.AuthTheme">
+<item name="android:textColorHint">#48ffffff</item>
+    <item name="android:textColor">?colorOnBackground</item>
+<item name="android:textSize">16sp</item>
+    <item name="android:minHeight">48dp</item>
+    <item name="android:paddingStart">16dp</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingEnd">16dp</item>
+<item name="android:background">@drawable/background_auth_et</item>
+
+</style>
+
+    <style name="appBarLayoutStyle" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="shippingTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+    <style name="shippingTextInputEditText" parent="Theme.NikeStoreTir1403">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+
+
+    </style>
+<style name="profileLinks">
+    <item name="android:minHeight">46dp</item>
+<item name="android:gravity">center_vertical</item>
+    <item name="android:drawablePadding">12dp</item>
+    <item name="android:paddingStart">16dp</item>
+    <item name="android:background">?selectableItemBackground</item>
+    <item name="android:textAppearance">?textAppearanceBody1</item>
+    <item name="android:clickable">true</item>
+</style>
+    <style name="avatars">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

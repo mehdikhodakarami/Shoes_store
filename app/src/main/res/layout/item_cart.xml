@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp">
+
+        <com.example.nikestore_tir_1403.view.NikeImageView
+            android:id="@+id/productIvCart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/productTitleTvCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.Owl.Headline6"
+            app:layout_constraintBottom_toBottomOf="@+id/productIvCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productIvCart"
+            app:layout_constraintTop_toTopOf="@+id/productIvCart"
+            tools:text="product Title" />
+
+        <TextView
+            android:id="@+id/previousPriceCartTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintBottom_toTopOf="@+id/priceTvCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/countTvCart"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="160000 تومان" />
+
+        <TextView
+            android:id="@+id/priceTvCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="?textAppearanceBody1"
+            app:layout_constraintBottom_toBottomOf="@+id/decreaseBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previousPriceCartTv"
+            tools:text="300303 تومان" />
+
+        <TextView
+            android:id="@+id/countTvCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/count"
+            android:textAppearance="?textAppearanceBody1"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/productIvCart"
+            app:layout_constraintStart_toStartOf="@+id/productIvCart"
+            app:layout_constraintTop_toBottomOf="@+id/productIvCart" />
+
+        <TextView
+            android:id="@+id/countTvCartNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="@id/countTvCart"
+            app:layout_constraintStart_toStartOf="@id/countTvCart"
+            app:layout_constraintTop_toBottomOf="@id/countTvCart"
+            tools:text="2" />
+
+        <ImageView
+            android:id="@+id/increaseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_increase_cart_item_count"
+            app:layout_constraintBottom_toBottomOf="@+id/countTvCartNumber"
+            app:layout_constraintEnd_toStartOf="@+id/countTvCartNumber"
+            app:layout_constraintTop_toTopOf="@id/countTvCartNumber" />
+
+        <ImageView
+            android:id="@+id/decreaseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/decrease_ic"
+            app:layout_constraintBottom_toBottomOf="@+id/countTvCartNumber"
+            app:layout_constraintStart_toEndOf="@+id/countTvCartNumber"
+            app:layout_constraintTop_toTopOf="@id/countTvCartNumber" />
+
+        <ProgressBar
+            android:id="@+id/changeCountProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/decreaseBtn"
+            app:layout_constraintEnd_toStartOf="@id/decreaseBtn"
+            app:layout_constraintStart_toEndOf="@id/increaseBtn"
+            app:layout_constraintTop_toTopOf="@id/decreaseBtn"
+            tools:visibility="visible"/>
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="46dp"
+    android:id="@+id/removeFromCartBtn"
+    android:text="@string/removeFromCArt"
+    android:background="?selectableItemBackground"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@id/decreaseBtn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="16dp"
+    android:textAppearance="?textAppearanceBody1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?dividerColor"
+            app:layout_constraintBottom_toTopOf="@id/removeFromCartBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
