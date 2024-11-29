@@ -75,7 +75,6 @@ cartItemsLiveData.value?.let {cartItems ->
         }
         purcheseDetail.totalPrice= totalPrice
         purcheseDetail.payablePrice = payablePrice
-        purchaseDetailLiveData.postValue(purcheseDetail)
 
 
     }

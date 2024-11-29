@@ -62,6 +62,6 @@ newReq.method(oldRequest.method(),oldRequest.body())
 
 
      val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).baseUrl("http://www.expertdevelopers.ir/api/v1/").client(okHttp).build()
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).baseUrl("https://fapi.7learn.com/api/v1/").client(okHttp).build()
     return retrofit.create(Apiservice::class.java)
 }

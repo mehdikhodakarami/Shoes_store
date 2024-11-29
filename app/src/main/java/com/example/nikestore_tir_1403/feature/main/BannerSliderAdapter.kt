@@ -10,4 +10,6 @@ class BannerSliderAdapter(fragment: Fragment,val banners:List<Banner>) : Fragmen
     override fun createFragment(position: Int): Fragment {
         return BannerFragment.newInstance(banners[position])
     }
+
+
 }

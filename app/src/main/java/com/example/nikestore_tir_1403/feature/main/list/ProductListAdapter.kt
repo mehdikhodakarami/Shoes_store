@@ -33,11 +33,13 @@ var productClickListener : ProductEventListener? = null
             notifyDataSetChanged()}
 
     inner class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-val favoriteBtn = itemView.findViewById<ImageView>(R.id.favoriteBtn)
+
+        val favoriteBtn = itemView.findViewById<ImageView>(R.id.favoriteBtn)
         val productIv = itemView.findViewById<NikeImageView>(R.id.productIv)
        val titleTv = itemView.findViewById<TextView>(R.id.ProductTitleTv)
         val previousPriceTv = itemView.findViewById<TextView>(R.id.previousPriceTv)
         val currentPriceTv =  itemView.findViewById<TextView>(R.id.currentPriceTv)
+
 
 
 fun bindProduct(product: Product){

@@ -122,6 +122,7 @@ if(viewType == VIEW_TYPE_ITEM){
             notifyItemChanged(cartItems.size)
         }
 
+
     }
     fun increaseCount(cartItem: CartItem){
         val index = cartItems.indexOf(cartItem)

@@ -47,19 +47,22 @@ import timber.log.Timber
 import java.util.*
 
 
-class App: Application() {
+class App : Application() {
     override fun onCreate() {
         //fresco
         Fresco.initialize(this)
 
-Timber.plant(Timber.DebugTree())
+        Timber.plant(Timber.DebugTree())
         super.onCreate();
 //        setLocale("fa"); // تغییر زبان به فارسی
 //
 //        Locale.setDefault(Locale("fa"))
         val myModules = module {
             single { createApiServiceInstance() }
-            single { Room.databaseBuilder(this@App,AppDataBase::class.java,"db_app").allowMainThreadQueries().build()}
+            single {
+                Room.databaseBuilder(this@App, AppDataBase::class.java, "db_app")
+                    .allowMainThreadQueries().build()
+            }
             factory<ProductRepo> {
                 ProductRepositoryImpl(
                     ProductRemoteDataSource(get()),
@@ -68,43 +71,57 @@ Timber.plant(Timber.DebugTree())
             }
 
 
-            factory<BannerRepo> {BannerRepositoryImpl(BannerRemoteDataSource(get()))  }
-factory <CartRepo>{CartRepositoryImpl(CartRemoteDataSource(get()))  }
-            single <SharedPreferences>{ this@App.getSharedPreferences("app_settings", MODE_PRIVATE) }
-            factory <UserRepo>{UserRepositoryImpl(
-                UserRemoteDataSource(get()),
-                UserLocalDataSource(get())
-            )}
+            factory<BannerRepo> { BannerRepositoryImpl(BannerRemoteDataSource(get())) }
+            factory<CartRepo> { CartRepositoryImpl(CartRemoteDataSource(get())) }
+            single<SharedPreferences> {
+                this@App.getSharedPreferences(
+                    "app_settings",
+                    MODE_PRIVATE
+                )
+            }
+            factory<UserRepo> {
+                UserRepositoryImpl(
+                    UserRemoteDataSource(get()),
+                    UserLocalDataSource(get())
+                )
+            }
             //Java Api With Call Adapter
-single <ApiServiceJava>{ApiJavaImpl.getInsApiJava()}
-            factory<ProductJavaRepo> { ProductJavaRepoImpl(ProductJavaRemoteDataSource(get()),
-            ProductJavaLocalDataSource()) }
-            factory<BannerJavaRepo>  {BannerJavaRepoImpl(BannerJavaRemoteDataSource(get()))}
+            single<ApiServiceJava> { ApiJavaImpl.getInsApiJava() }
+            factory<ProductJavaRepo> {
+                ProductJavaRepoImpl(
+                    ProductJavaRemoteDataSource(get()),
+                    ProductJavaLocalDataSource()
+                )
+            }
+            factory<BannerJavaRepo> { BannerJavaRepoImpl(BannerJavaRemoteDataSource(get())) }
 
-single<EventBus> { EventBus() }
-            single <ImageLoadingService>{ FrescoImageLoadingService() }
-            factory{(viewType:Int)-> ProductListAdapter(viewType,get()) }
-            viewModel{(productId:Int)-> CommentListViewModel(get(),productId) }
-viewModel { (sort :Int)-> ProductListViewModel(get(),sort) }
-factory <CommentRepo>{ CommentRepositoryImpl(CommentRemoteDataSource(get())) }
-            single<OrderRepo>{OrderRepositoryImpl(OrderRemoteDataSource(get()))}
-viewModel{(bundle:Bundle)-> ProductDetailViewModel(bundle,get(),get()) }
+            single<EventBus> { EventBus() }
+            single<ImageLoadingService> { FrescoImageLoadingService() }
+            factory { (viewType: Int) -> ProductListAdapter(viewType, get()) }
+            viewModel { (productId: Int) -> CommentListViewModel(get(), productId) }
+            viewModel { (sort: Int) -> ProductListViewModel(get(), sort) }
+            factory<CommentRepo> { CommentRepositoryImpl(CommentRemoteDataSource(get())) }
+            single<OrderRepo> { OrderRepositoryImpl(OrderRemoteDataSource(get())) }
+            viewModel { (bundle: Bundle) -> ProductDetailViewModel(bundle, get(), get()) }
             viewModel { AuthViewModel(get()) }
             viewModel { CartViewModel(get()) }
-            viewModel{MainViewModel(get())}
-        viewModel { HomeViewModel(get(),get(),get(),get()) }
-viewModel { ShippingViewModel(get()) }
-            viewModel{(orderId:Int)->CheckoutViewModel(get(),orderId)}
+            viewModel { MainViewModel(get()) }
+            viewModel { HomeViewModel(get(), get(), get(), get()) }
+            viewModel { ShippingViewModel(get()) }
+            viewModel { (orderId: Int) -> CheckoutViewModel(get(), orderId) }
             viewModel { ProfileViewModel(get()) }
-            viewModel{FavoriteProductsViewModel(get())}
-            factory { UserLocalDataSource(get())}}
-        startKoin{androidLogger()
-            androidContext(this@App)
-           modules(myModules)
+            viewModel { FavoriteProductsViewModel(get()) }
+            factory { UserLocalDataSource(get()) }
         }
-        val userRepo : UserRepo = get()
+        startKoin {
+            androidLogger()
+            androidContext(this@App)
+            modules(myModules)
+        }
+        val userRepo: UserRepo = get()
         userRepo.loadToken();
     }
+
     private fun setLocale(lang: String) {
         val locale = Locale(lang)
         Locale.setDefault(locale)
